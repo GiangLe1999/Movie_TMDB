@@ -8,7 +8,7 @@ import "./VideoSection.scss";
 
 import ContentWrapper from "../../../components/ContentWrapper";
 import { PlayIcon } from "../DetailsBanner/PlayButton";
-import VideoPopup from "../../../components/VideoPopUp";
+import VideoPopup from "../../../components/VideoPopup";
 import Img from "../../../components/LazyLoadImage/Img";
 import { useRef } from "react";
 
