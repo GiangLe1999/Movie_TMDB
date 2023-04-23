@@ -144,7 +144,12 @@ const Explore = () => {
                 {data?.results?.map((item, index) => {
                   if (item.media_type === "person") return;
                   return (
-                    <MovieCard key={index} data={item} mediaType={mediaType} />
+                    <MovieCard
+                      key={index}
+                      data={item}
+                      mediaType={mediaType}
+                      fromSearch={true}
+                    />
                   );
                 })}
               </InfiniteScroll>

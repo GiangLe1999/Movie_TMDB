@@ -15,7 +15,7 @@ const Similar = ({ mediaType, id }) => {
           <CarouselHeading showSwitch={false}>
             Similar {mediaType === "tv" ? "TV Shows" : "Movies"}
           </CarouselHeading>
-          <CarouselContent data={data} isloading={isLoading} />
+          <CarouselContent data={data} isLoading={isLoading} />
         </ContentWrapper>
       )}
     </>

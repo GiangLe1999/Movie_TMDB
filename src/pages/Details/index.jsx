@@ -11,7 +11,7 @@ import Recommendation from "./Carousels/Recommendation";
 
 const Details = () => {
   const { mediaType, id } = useParams();
-  const { data, loading } = useFetch(`/${mediaType}/${id}/videos`);
+  const { data, isLoading } = useFetch(`/${mediaType}/${id}/videos`);
   const { data: credits, loading: creditsLoading } = useFetch(
     `/${mediaType}/${id}/credits`
   );
@@ -20,7 +20,7 @@ const Details = () => {
     <div>
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
       <Cast data={credits?.cast} loading={creditsLoading} />
-      <VideoSection data={data} loading={loading} />
+      <VideoSection data={data} loading={isLoading} />
       <Similar mediaType={mediaType} id={id} />
       <Recommendation mediaType={mediaType} id={id} />
     </div>

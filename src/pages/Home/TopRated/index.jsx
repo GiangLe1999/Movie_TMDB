@@ -14,7 +14,7 @@ const TopRated = () => {
       <CarouselHeading showSwitch={true} data={["movies", "TV Shows"]}>
         Top Rated
       </CarouselHeading>
-      <CarouselContent data={data} isloading={isLoading} />
+      <CarouselContent data={data} isLoading={isLoading} />
     </ContentWrapper>
   );
 };

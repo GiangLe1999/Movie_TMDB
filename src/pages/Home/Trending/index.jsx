@@ -15,7 +15,7 @@ const Trending = () => {
       <CarouselHeading showSwitch={true} data={["day", "week"]}>
         Trending
       </CarouselHeading>
-      <CarouselContent data={data} isloading={isLoading} />
+      <CarouselContent data={data} isLoading={isLoading} />
     </ContentWrapper>
   );
 };

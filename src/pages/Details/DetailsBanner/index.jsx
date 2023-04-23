@@ -18,7 +18,7 @@ const DetailsBanner = ({ video, crew }) => {
   const [show, setShow] = useState(false);
   const [videoId, setVideoId] = useState(null);
   const { mediaType, id } = useParams();
-  const { data, loading } = useFetch(`/${mediaType}/${id}`);
+  const { data, isLoading } = useFetch(`/${mediaType}/${id}`);
   console.log(data);
 
   const { url } = useSelector((state) => state.home);
@@ -38,7 +38,7 @@ const DetailsBanner = ({ video, crew }) => {
 
   return (
     <div className="detailsBanner">
-      {!loading ? (
+      {!isLoading ? (
         <>
           {data && (
             <>
@@ -55,7 +55,7 @@ const DetailsBanner = ({ video, crew }) => {
                         src={url.backdrop + data.poster_path}
                       />
                     ) : (
-                      <Img src={PosterFallback} />
+                      <Img className="posterImg" src={PosterFallback} />
                     )}
                   </div>
                   <div className="right">
